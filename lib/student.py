@@ -3,6 +3,10 @@
 from user import User
 
 class Student(User):
-    
-    def learn(self):
-        pass
+    knowledge = None
+
+    def learn(self, lesson):
+        if self.knowledge == None:
+            self.knowledge = []
+        
+        self.knowledge.append(lesson)
